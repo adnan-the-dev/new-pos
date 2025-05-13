@@ -31,9 +31,9 @@ export function Header() {
           <NavHashLink smooth to="#home" onClick={closeMenu}>
             Home
           </NavHashLink>
-          <NavHashLink smooth to="#about" onClick={closeMenu}>
+          {/* <NavHashLink smooth to="#about" onClick={closeMenu}>
             About me
-          </NavHashLink>
+          </NavHashLink> */}
           <NavHashLink smooth to="#project" onClick={closeMenu}>
             Project
           </NavHashLink>
