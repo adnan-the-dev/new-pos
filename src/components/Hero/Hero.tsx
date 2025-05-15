@@ -20,7 +20,7 @@ export function Hero() {
           viewport={{ once: true }}
         >
           <p>
-            Hello <img src={Hello} alt="Hello" width="20px" />, I'm
+            Hello <img src={Hello} alt="Hello" width="20px" />
           </p>
         </motion.div>
 
@@ -39,7 +39,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h3>Software Engineer</h3>
+          <h3>IT Solutions</h3>
         </motion.div>
 
         <motion.div
@@ -48,7 +48,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="small-resume">1 Year Experience</p>
+          <p className="small-resume">Leading the world with innovation</p>
         </motion.div>
 
         <motion.div
