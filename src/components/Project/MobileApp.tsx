@@ -6,36 +6,36 @@ import {
   DialogContent,
   IconButton,
   Box,
-  Typography,
+  Typography
 } from "@mui/material";
 // import CloseIcon from "@mui/icons-material/Close";
 
 // Images
-import kitchen from "../../assets/kitchen.png";
-import delivery from "../../assets/delivery.png";
-import dashboard from "../../assets/dashboard.png";
-import multioutlet from "../../assets/mulitoutlet.png";
-import inventory from "../../assets/inventery.png";
-import pnlReport from "../../assets/pnl-report.png";
+import loacationDetail from "../../assets/location.png";
+import home from "../../assets/home.png";
+import cartSection from "../../assets/cart.png";
+import userInfo from "../../assets/user-info.png";
+import orderSummary from "../../assets/order-summary.png";
+import userProfile from "../../assets/profile.png";
 
-type ProjectItem = {
+type Project = {
   title: string;
   image: string;
 };
 
-export function Project() {
-  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+export function MobileApp() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const projects: ProjectItem[] = [
-    { title: "Kitchen Display System", image: kitchen },
-    { title: "Inventory Management", image: inventory },
-    { title: "Delivery Monitor", image: delivery },
-    { title: "Dashboard", image: dashboard },
-    { title: "Multi-outlet System", image: multioutlet },
-    { title: "Accounts and PNL Reports", image: pnlReport },
+  const projects: Project[] = [
+    { title: "Current Location Details", image: loacationDetail },
+    { title: "Home Page", image: home },
+    { title: "Cart Details", image: cartSection },
+    { title: "User Details", image: userInfo },
+    { title: "Order Status", image: orderSummary },
+    { title: "User Profile", image: userProfile },
   ];
 
-  const cardStyle = {
+  const cardStyle: React.CSSProperties = {
     borderRadius: "12px",
     overflow: "hidden",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -47,7 +47,7 @@ export function Project() {
     cursor: "pointer",
   };
 
-  const headerStyle = {
+  const headerStyle: React.CSSProperties = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -69,7 +69,7 @@ export function Project() {
 
   return (
     <Container id="project">
-      <h2>Point Of Sale</h2>
+      <h2>Mobile-App</h2>
       <div className="projects">
         {projects.map((project, index) => (
           <motion.article
@@ -111,7 +111,7 @@ export function Project() {
         ))}
       </div>
 
-      {/* Image Popup */}
+      {/* MUI Dialog Popup */}
       <Dialog
         open={!!selectedProject}
         onClose={() => setSelectedProject(null)}
@@ -136,10 +136,17 @@ export function Project() {
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
-                style={{ width: "100%", height: "auto", display: "block" }}
+                style={{
+                  width: "100%",
+                  maxHeight: "500px",
+                  objectFit: "contain",
+                  display: "block",
+                  margin: "0 auto",
+                  backgroundColor: "#f9f9f9",
+                }}
               />
               <Box sx={{ p: 2 }}>
-                <Typography variant="h6">{selectedProject.title}</Typography>
+                <Typography variant="h4">{selectedProject.title}</Typography>
               </Box>
             </Box>
           )}

@@ -11,31 +11,31 @@ import {
 // import CloseIcon from "@mui/icons-material/Close";
 
 // Images
-import kitchen from "../../assets/kitchen.png";
-import delivery from "../../assets/delivery.png";
-import dashboard from "../../assets/dashboard.png";
-import multioutlet from "../../assets/mulitoutlet.png";
-import inventory from "../../assets/inventery.png";
-import pnlReport from "../../assets/pnl-report.png";
+import login from "../../assets/login.png";
+import address from "../../assets/address-page.png";
+import details from "../../assets/itemdetails.png";
+import cartdetails from "../../assets/cartdetails.png";
+import userdetail from "../../assets/userdetails.png";
+import otpconfirm from "../../assets/otp-verificaton.png";
 
-type ProjectItem = {
+type Project = {
   title: string;
   image: string;
 };
 
-export function Project() {
-  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+export function Webapp() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const projects: ProjectItem[] = [
-    { title: "Kitchen Display System", image: kitchen },
-    { title: "Inventory Management", image: inventory },
-    { title: "Delivery Monitor", image: delivery },
-    { title: "Dashboard", image: dashboard },
-    { title: "Multi-outlet System", image: multioutlet },
-    { title: "Accounts and PNL Reports", image: pnlReport },
+  const projects: Project[] = [
+    { title: "Login", image: login },
+    { title: "Addres Confirmation", image: address },
+    { title: "Item Details", image: details },
+    { title: "Cart Details", image: cartdetails },
+    { title: "User Confirmation", image: userdetail },
+    { title: "Otp verification", image: otpconfirm },
   ];
 
-  const cardStyle = {
+  const cardStyle: React.CSSProperties = {
     borderRadius: "12px",
     overflow: "hidden",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -47,7 +47,7 @@ export function Project() {
     cursor: "pointer",
   };
 
-  const headerStyle = {
+  const headerStyle: React.CSSProperties = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -69,7 +69,7 @@ export function Project() {
 
   return (
     <Container id="project">
-      <h2>Point Of Sale</h2>
+      <h2>Web-App</h2>
       <div className="projects">
         {projects.map((project, index) => (
           <motion.article
@@ -111,7 +111,7 @@ export function Project() {
         ))}
       </div>
 
-      {/* Image Popup */}
+      {/* Image Popup using MUI Dialog */}
       <Dialog
         open={!!selectedProject}
         onClose={() => setSelectedProject(null)}
@@ -139,7 +139,7 @@ export function Project() {
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
               <Box sx={{ p: 2 }}>
-                <Typography variant="h6">{selectedProject.title}</Typography>
+                <Typography variant="h4">{selectedProject.title}</Typography>
               </Box>
             </Box>
           )}

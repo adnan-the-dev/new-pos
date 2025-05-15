@@ -30,7 +30,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h1>Shuff-Co</h1>
+          <h1>Shuf-Co</h1>
         </motion.div>
 
         <motion.div
