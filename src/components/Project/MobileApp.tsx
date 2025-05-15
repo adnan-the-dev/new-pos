@@ -8,7 +8,7 @@ import {
   Box,
   Typography
 } from "@mui/material";
-// import CloseIcon from "@mui/icons-material/Close";
+import CloseIcon from "@mui/icons-material/Close";
 
 // Images
 import loacationDetail from "../../assets/location.png";
@@ -119,7 +119,7 @@ export function MobileApp() {
         fullWidth
       >
         <DialogContent sx={{ position: "relative", p: 0 }}>
-          <IconButton
+          {/* <IconButton
             onClick={() => setSelectedProject(null)}
             sx={{
               position: "absolute",
@@ -129,8 +129,8 @@ export function MobileApp() {
               zIndex: 1,
             }}
           >
-            {/* <CloseIcon /> */}
-          </IconButton>
+            <CloseIcon />
+          </IconButton> */}
           {selectedProject && (
             <Box>
               <img

@@ -119,7 +119,7 @@ export function Project() {
         fullWidth
       >
         <DialogContent sx={{ position: "relative", p: 0 }}>
-          <IconButton
+          {/* <IconButton
             onClick={() => setSelectedProject(null)}
             sx={{
               position: "absolute",
@@ -129,8 +129,8 @@ export function Project() {
               zIndex: 1,
             }}
           >
-            {/* <CloseIcon /> */}
-          </IconButton>
+            <CloseIcon />
+          </IconButton> */}
           {selectedProject && (
             <Box>
               <img
@@ -139,7 +139,7 @@ export function Project() {
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
               <Box sx={{ p: 2 }}>
-                <Typography variant="h6">{selectedProject.title}</Typography>
+                <Typography variant="h4">{selectedProject.title}</Typography>
               </Box>
             </Box>
           )}

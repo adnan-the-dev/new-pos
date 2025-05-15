@@ -119,7 +119,7 @@ export function Webapp() {
         fullWidth
       >
         <DialogContent sx={{ position: "relative", p: 0 }}>
-          <IconButton
+          {/* <IconButton
             onClick={() => setSelectedProject(null)}
             sx={{
               position: "absolute",
@@ -129,8 +129,8 @@ export function Webapp() {
               zIndex: 1,
             }}
           >
-            {/* <CloseIcon /> */}
-          </IconButton>
+            <CloseIcon />
+          </IconButton> */}
           {selectedProject && (
             <Box>
               <img
