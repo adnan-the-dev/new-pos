@@ -7,9 +7,12 @@ import githubIcon from "../../assets/github.svg";
 import whatsapp from "../../assets/whatsapp.svg";
 import Hello from "../../assets/Hello.gif";
 import telegram from "../../assets/telegram.svg";
+import logo from "../../assets/llight-1.png";
 import { motion } from "framer-motion";
+import { useTheme } from "../Them/ThemeContext";
 
 export function Hero() {
+  const { isDarkMode } = useTheme();
   return (
     <Container id="home">
       <div className="hero-text">
@@ -30,7 +33,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h1>Shuf-Co</h1>
+          <h1>ShufCo</h1>
         </motion.div>
 
         <motion.div
@@ -72,27 +75,27 @@ export function Hero() {
         >
           <div className="social-media">
             <a
-              href="https://www.linkedin.com/in/codevinayak"
+              href="/"
               target="_blank"
               rel="noreferrer"
             >
               <img src={linkedin} alt="Linkedin" />
             </a>
             <a
-              href="https://github.com/CodeVinayak/"
+              href="#"
               target="_blank"
               rel="noreferrer"
             >
               <img src={githubIcon} alt="GitHub" />
             </a>
             <a
-              href="https://api.whatsapp.com/send/?phone=%2B919630576848&text=Hello+Vinayak+I+found+your+contact+through+portfolio+site.%0A%0A"
+              href="#"
               target="_blank"
               rel="noreferrer"
             >
               <img src={whatsapp} alt="Whatsapp" />
             </a>
-            <a href="https://t.me/CodeVinayak" target="_blank" rel="noreferrer">
+            <a href="#" target="_blank" rel="noreferrer">
               <img src={telegram} alt="telegram" />
             </a>
           </div>
@@ -106,7 +109,11 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 1 }}
           viewport={{ once: true }}
         >
-          <img src={Illustration} alt="Ilustração" />
+          {isDarkMode ? (
+            <img src={logo} alt="Ilustração" />
+          ) : (
+            <img src={Illustration} alt="Ilustração" />
+          )}
         </motion.div>
       </div>
     </Container>
