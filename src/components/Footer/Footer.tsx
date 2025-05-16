@@ -5,55 +5,22 @@ import githubIcon from "../../assets/github.svg";
 import whatsapp from "../../assets/whatsapp.svg";
 import telegram from "../../assets/telegram.svg";
 import instagramIcon from "../../assets/instagram.svg";
+import logo from "../../assets2/llight-1.png";
 
-export function Footer() {
+export const Footer: React.FC = () => {
   return (
-    <Container className="footer">
-      {/* <a href="https://vinayaksingh.in" className="logo"> */}
-      <div className="logo">
-        <span>shuf.co@gmail</span>
-        <span>.com</span>
-      </div>
-      {/* </a> */}
-      <div>
-        <p>
-          This Website was made with <img src={reactIcon} alt="React" />
-          {/* <span>❤️</span> */}
-        </p>
-      </div>
-      <div className="social-media">
-        <a
-          href="https://www.linkedin.com/in/codevinayak"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={linkedin} alt="Linkedin" />
-        </a>
-        <a
-          href="https://github.com/Uzair-boot"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={githubIcon} alt="GitHub" />
-        </a>
-        <a
-          href="https://api.whatsapp.com/send/?phone=%2B919630576848&text=Hello+Vinayak+I+found+your+contact+through+portfolio+site.%0A%0A"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={whatsapp} alt="Whatsapp" />
-        </a>
-        <a href="https://t.me/CodeVinayak" target="_blank" rel="noreferrer">
-          <img src={telegram} alt="telegram" />
-        </a>
-        <a
-          href="https://www.instagram.com/vinayaksingh.in"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={instagramIcon} alt="Instagram" />
-        </a>
+    <Container>
+      <div className="container">
+        <div>
+          <img src={logo} alt="Logo" />
+        </div>
+        <div>
+          <p>
+            Powered By: <strong>SHUFCO.org</strong>
+          </p>
+          <p>©2025 All Rights Reserved.</p>
+        </div>
       </div>
     </Container>
   );
-}
+};

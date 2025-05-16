@@ -1,61 +1,53 @@
 import styled from "styled-components";
 
-
 export const Container = styled.footer`
   background-color: #2b2b2b;
-  padding: 3rem 15rem;
+  padding: 1rem 15rem;
   margin-top: 10rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  border:1px solid gray;
+//   background: gray;
 
-
-  .logo{
-    font-size: 2.8rem;
-  }
-
-  p{
-    letter-spacing: 0.2rem;
+  .container {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    img{
-      width: 2.6rem;
-      animation: spinning 5s infinite linear;
-    }
-  }
-  .social-media{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
-
-    img,span{
-      font-size: 3rem;
-      width: 3rem;
-    }
   }
 
-
-  @keyframes spinning {
-    0%{
-      transform: rotate(0);
-    }
-    100%{
-      transform: rotate(360deg);
-    }
+  img {
+    width: 60px;
+    height: auto;
   }
 
-  @media(max-width: 800px){
+  p {
+    color: #ffffff;
+    margin: 0.5rem 0;
+  }
+
+  strong {
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  @media (max-width: 800px) {
     padding: 4rem 10rem;
     flex-direction: column;
     gap: 2rem;
     text-align: center;
+
+    .container {
+      flex-direction: column;
+    }
   }
-  @media(max-width: 600px){
+
+  @media (max-width: 600px) {
     padding: 4rem 1rem;
-    p{
+
+    p {
       font-size: 1.2rem;
     }
   }
-`
+`;
