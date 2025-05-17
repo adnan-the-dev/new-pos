@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   Dialog,
   DialogContent,
-  IconButton,
   Box,
   Typography,
 } from "@mui/material";
