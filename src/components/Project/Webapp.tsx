@@ -165,7 +165,7 @@ export function Webapp() {
                 }}
               />
               <Box sx={{ p: 2 }}>
-                <Typography variant="h6">{selectedProject.title}</Typography>
+                <Typography variant="h4">{selectedProject.title}</Typography>
               </Box>
             </Box>
           )}
