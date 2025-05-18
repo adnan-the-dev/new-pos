@@ -23,7 +23,7 @@ export function Hero() {
           viewport={{ once: true }}
         >
           <p>
-            Hello <img src={Hello} alt="Hello" width="20px" />
+            Hello <img src={Hello} alt="Hello" width="20px" />, Welcome to
           </p>
         </motion.div>
 
@@ -74,25 +74,13 @@ export function Hero() {
           viewport={{ once: true }}
         >
           <div className="social-media">
-            <a
-              href="/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="/" target="_blank" rel="noreferrer">
               <img src={linkedin} alt="Linkedin" />
             </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" target="_blank" rel="noreferrer">
               <img src={githubIcon} alt="GitHub" />
             </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" target="_blank" rel="noreferrer">
               <img src={whatsapp} alt="Whatsapp" />
             </a>
             <a href="#" target="_blank" rel="noreferrer">

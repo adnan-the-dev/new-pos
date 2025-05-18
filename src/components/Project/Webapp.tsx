@@ -15,12 +15,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 // Images
-import login from "../../assets/login.png";
 import address from "../../assets/address-page.png";
 import details from "../../assets/itemdetails.png";
 import cartdetails from "../../assets/cartdetails.png";
 import userdetail from "../../assets/userdetails.png";
 import otpconfirm from "../../assets/otp-verificaton.png";
+import orderDetails from "../../assets/order-details.png";
 import { useTheme } from "../Them/ThemeContext";
 
 type Project = {
@@ -33,12 +33,12 @@ export function Webapp() {
   const { isDarkMode } = useTheme();
 
   const projects: Project[] = [
-    { title: "Login", image: login },
     { title: "Address Confirmation", image: address },
     { title: "Item Details", image: details },
     { title: "Cart Details", image: cartdetails },
     { title: "User Confirmation", image: userdetail },
     { title: "OTP Verification", image: otpconfirm },
+    { title: "Order Details", image: orderDetails },
   ];
 
   const cardStyle: React.CSSProperties = {
